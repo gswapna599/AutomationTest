@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18732" started-at="2020-07-12T14:21:34Z" finished-at="2020-07-12T14:21:52Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18732" started-at="2020-07-12T14:21:34Z" finished-at="2020-07-12T14:21:52Z">
+      <class name="Test.CarRegistrationDetailsTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Test.CarRegistrationDetailsTest@ae45eb6]" name="beforeClass" is-config="true" duration-ms="3601" started-at="2020-07-12T14:21:34Z" finished-at="2020-07-12T14:21:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="freeCarCheck()[pri:0, instance:Test.CarRegistrationDetailsTest@ae45eb6]" name="freeCarCheck" duration-ms="14973" started-at="2020-07-12T14:21:37Z" finished-at="2020-07-12T14:21:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- freeCarCheck -->
+        <test-method status="PASS" signature="validateCarCheckResults()[pri:0, instance:Test.CarRegistrationDetailsTest@ae45eb6]" name="validateCarCheckResults" duration-ms="17" started-at="2020-07-12T14:21:52Z" depends-on-methods="Test.CarRegistrationDetailsTest.freeCarCheck" finished-at="2020-07-12T14:21:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCarCheckResults -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:Test.CarRegistrationDetailsTest@ae45eb6]" name="afterClass" is-config="true" duration-ms="120" started-at="2020-07-12T14:21:52Z" finished-at="2020-07-12T14:21:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Test.CarRegistrationDetailsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
