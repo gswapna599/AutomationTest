@@ -42,9 +42,7 @@ public class CarRegistrationDetailsTest {
 		List<List<String>> collection_data = new ArrayList<List<String>>();
 
 		driver.get("https://cartaxcheck.co.uk/");
-		System.out.println("size of registration  numbers: " + regNumber.size());
 		for (int i = 0; i < regNumber.size(); i++) {
-			System.out.println("Car Reg Number is:" + regNumber.get(i));
 			driver.findElement(By.id("vrm-input")).sendKeys(regNumber.get(i));
 			Thread.sleep(1000);
 			driver.findElement(By.className("jsx-3655351943")).click();
@@ -53,7 +51,6 @@ public class CarRegistrationDetailsTest {
 				String label = driver
 						.findElement(By.xpath("//*[@id=\"m\"]/div/div[3]/div[1]/div/span/div[2]/dl[" + j + "]/dt"))
 						.getText();
-				System.out.println("vlaue of the label is:" + label);
 				if (!label_data.contains(label))
 					label_data.add(label);
 
@@ -65,25 +62,19 @@ public class CarRegistrationDetailsTest {
 						.findElement(By.xpath("//*[@id=\"m\"]/div/div[3]/div[1]/div/span/div[2]/dl[" + k + "]/dd"))
 						.getText();
 
-				System.out.println("vlaue of the value is:" + value);
 				if (!value_data.contains(value))
 					value_data.add(value);
-				System.out.println("vlaue of the value is:" + value_data);
 
 			}
 
 			driver.navigate().back();
 		}
-//		if (!collection_data.contains(value_data))
-//			collection_data.add(value_data);
-//		System.out.println("collection data is: " + collection_data);
+
 		int size = 5;
 		for (int start = 0; start < value_data.size(); start += size) {
 			int end = Math.min(start + size, value_data.size());
 			List<String> subList = value_data.subList(start, end);
-			// System.out.println("sublist is :" + subList);
 			collection_data.add(subList);
-			System.out.println("final collection  is :" + collection_data);
 
 		}
 
@@ -93,9 +84,7 @@ public class CarRegistrationDetailsTest {
 	public void validateCarCheckResults() throws FileNotFoundException {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.MILLISECONDS);
 		List<String> outputValues = CarRegistrationDetailsTest.readOutputTextFile();
-		System.out.println("size of output  details: " + outputValues.size());
 		for (int i = 0; i < outputValues.size(); i++) {
-			System.out.println("Car Reg details are:" + outputValues.get(i));
 		}
 	}
 
