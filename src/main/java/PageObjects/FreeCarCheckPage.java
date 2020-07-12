@@ -33,7 +33,6 @@ public class FreeCarCheckPage extends BasePage {
 		List<List<String>> collection_data = new ArrayList<List<String>>();
 		for (int j = 1; j <= 5; j++) {
 			String label = driver.findElement(By.xpath(label_xpath_start + j + label_xpath_end)).getText();
-			System.out.println("vlaue of the label is:" + label);
 			if (!label_data.contains(label))
 				label_data.add(label);
 
@@ -42,10 +41,8 @@ public class FreeCarCheckPage extends BasePage {
 
 		for (int k = 1; k <= 5; k++) {
 			String value = driver.findElement(By.xpath(value_xpath_start + k + value_xpath_end)).getText();
-			System.out.println("vlaue of the value is:" + value);
 			if (!value_data.contains(value))
 				value_data.add(value);
-			System.out.println("vlaue of the value is:" + value_data);
 
 		}
 
@@ -56,7 +53,6 @@ public class FreeCarCheckPage extends BasePage {
 			List<String> subList = value_data.subList(start, end);
 			// System.out.println("sublist is :" + subList);
 			collection_data.add(subList);
-			System.out.println("final collection  is :" + collection_data);
 
 		}
 		return (CarTaxCheckHomePage) openPage(CarTaxCheckHomePage.class);
